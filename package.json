@@ -1,0 +1,23 @@
+{
+  "name": "ethereum-contract-generator",
+  "version": "1.0.1",
+  "description": "generate client and server use js module from contract metas",
+  "main": "index.js",
+  "repository": "git@github.com:justinchou/ethereum-contract-generator.git",
+  "author": "JustinChou<zhou78620051@126.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "commander": "^2.16.0",
+    "debug": "^3.1.0",
+    "ejs": "^2.5.9",
+    "mkdirp": "^0.5.1"
+  },
+  "bin": {
+    "contract-generator": "./bin/contract-generator.js",
+    "ctctg": "./bin/contract-generator.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

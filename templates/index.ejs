@@ -1,0 +1,17 @@
+<% for (var i = 0; i < abis.length; i++) {%> const <%=abis[i].contractName%> = require('./<%=abis[i].file%>')
+<%} %>
+<% for (var i = 0; i < abis.length; i++) {%> module.exports.<%=abis[i].contractName%> = <%=abis[i].contractName%>
+<%} %>
+
+<% if (role == 'client') { %>
+module.exports.send = (method, ...args) => {
+  const arr = method.split('.')
+  if (!arr || arr.length !== 2) {
+    throw new Error('method invalid, please check you request method!')
+  } 
+
+  const contractName = arr[0]
+  const functionName = arr[0]
+  return module.exports[contractName][functionName](...args)
+}
+<% } %>
