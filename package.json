@@ -1,6 +1,6 @@
 {
   "name": "ethereum-contract-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generate client and server use js module from contract metas",
   "main": "index.js",
   "repository": "git@github.com:justinchou/ethereum-contract-generator.git",
